@@ -21,6 +21,11 @@
         <div class="bsr-talk-card-result">
 
             <div class="bsr-talk-card-result-ratings">
+    
+                <a class="bsr-talk-card-questions" href="/admin/<%= talk.slug %>/questions">
+                    Preguntas
+                </a>
+
                 <div class="bsr-talk-card-result-average">
                     <%= talk._average %>
                     <small>de media en <%= talk._feedbackCount %> valoraciones</small>
@@ -65,20 +70,19 @@
                     </div>
                     <span><%= talk._1starsCount %></span>
                 </div>
+
             </div>
 
             <div class="bsr-talk-card-result-comments">
                 <% talk._comments.forEach((comment) => { %>
                     <div class="bsr-talk-card-result-comment">
-                        <%= comment %>
+                        <p><%= comment.rating %></p>
+                        <p><%= comment.comment %></p>
                     </div>
                 <% }) %>
             </div>
         </div>
 
-        <div>
-            <a href="/admin/<%= talk.slug %>/questions">Preguntas</a>
-        </div>
     </div>
 <% }) %>
 

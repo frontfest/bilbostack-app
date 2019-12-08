@@ -204,6 +204,11 @@ html, body {
     margin-bottom: 5px;
 }
 
+.bsr-talk-card-result-comment p {
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+}
+
 .bsr-talk-card-result-average {
     font-size: 2em;
     margin-bottom: 10px;
@@ -239,6 +244,17 @@ html, body {
     .bsr-talk-card-result-comments {
         padding: 15px 0 0 0;
     }
+}
+
+.bsr-talk-card-questions {
+    width: fit-content;
+    text-decoration: none;
+    display: block;
+    border-radius: 4px;
+    margin: 10px 0 20px 0;
+    color: white;
+    padding: 10px 15px;
+    background-color: var(--primary-color);
 }
 
 .bsr-talk-card-arrow {

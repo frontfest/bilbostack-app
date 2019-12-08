@@ -31,8 +31,19 @@ async function getIndex(req, res) {
 
         feedbackCount++;
 
+        var stars = {
+            5: '⭐⭐⭐⭐⭐',
+            4: '⭐⭐⭐⭐',
+            3: '⭐⭐⭐',
+            2: '⭐⭐',
+            1: '⭐'
+        };
+
         if (feedback.comment) {
-            talk._comments.push(`[${feedback.rating} stars] ${feedback.comment}`);
+            talk._comments.push({
+                rating: stars[feedback.rating],
+                comment: feedback.comment
+            });
         }
 
         talk[`_${feedback.rating}starsCount`]++;
