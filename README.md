@@ -92,6 +92,14 @@ ADMIN_PASSWORD=password
 
 All this will create a data folder with the PostgreSQL persistent information.
 
+## Deploy
+
+There is a `deploy.sh` script available to automatize the process of deploying in production. It will check all the dependencies needed and will install everything it needs. You can use the following command to run it:
+
+```
+curl -o- https://raw.githubusercontent.com/frontfest/frontfest-app/master/deploy.sh | bash
+```
+
 ### Using a pre-compiled Docker image
 
 Inside `docker-compose.yml`, in `services.app`, replace `image: eventtoolbox` with the name of the correct image (including registry url) and remove the `build` parameter.
