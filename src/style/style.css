@@ -1,14 +1,78 @@
-@import "./reset";
-@import "./variables";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* VARIABLES */
+
+:root {
+    --primary-color: #d09c2e;
+    --secondary-color: #542836;
+    --accent-color: var(--primary-color);
+    --text-color: #333;
+    --background-color: #eeeced;
+    --highlight-color: #d09d2e49;
+    
+    --global-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --monospace-font: monospace;
+    
+    --roundness: 0;
+}
+
+/* CUSTOM CSS */
 
 ::-moz-selection,
 ::selection {
-    background:$highlight-color;
+    background: var(--highlight-color);
 }
 
 html {
-    font-family: $global-font;
-    -webkit-tap-highlight-color: $highlight-color;
+    font-family: var(--global-font);
+    -webkit-tap-highlight-color: var(--highlight-color);
 }
 
 body {
@@ -20,7 +84,7 @@ body {
 
 html, body {
     height: 100%;
-    background-color: $background-color;
+    background-color: var(--background-color);
 }
 
 .bsr-body {
@@ -36,7 +100,7 @@ html, body {
 }
 
 .bsr-header {
-    background-color: $secondary-color;
+    background-color: var(--secondary-color);
     color: white;
     text-align: center;
     user-select: none;
@@ -59,14 +123,15 @@ html, body {
     font-size: 2.5em;
     margin: 0 8px;
     font-weight: 900;
-    font-family: $monospace-font;
+    font-family: var(--monospace-font);
+}
 
-    &-darker {
-        color: #9b9b9b;
-    }
-    &-accent {
-        color: $primary-color;
-    }
+.bsr-header-title-darker {
+    color: #9b9b9b;
+}
+
+.bsr-header-title-accent {
+    color: var(--primary-color);
 }
 
 .bsr-talk-card-link {
@@ -79,14 +144,14 @@ html, body {
     margin: 10px 10px 0 10px;
     padding: 15px 35px 15px 15px;
     background-color: white;
-    border-radius: 10px * $roundness;
+    border-radius: 10px * var(--roundness);
     position: relative;
 }
 
 .bsr-talk-card-name {
     font-size: 1.3em;
     font-weight: 700;
-    color: $secondary-color;
+    color: var(--secondary-color);
     display: block;
     margin: 0 0 .5em 0;
 }
@@ -103,7 +168,7 @@ html, body {
 .bsr-talk-card-info-speaker {
     font-size: 1em;
     flex-grow: 1;
-    color: $primary-color;
+    color: var(--primary-color);
     font-style: italic;
     font-weight: 700;
 }
@@ -112,7 +177,7 @@ html, body {
     font-size: 1em;
     font-weight: 700;
     float: right;
-    color: $primary-color;
+    color: var(--primary-color);
     margin: 0 .6em;
     white-space: nowrap;
 }
@@ -169,7 +234,7 @@ html, body {
     bottom: 0;
     left: 0;
     width: 0%;
-    background-color: $primary-color;
+    background-color: var(--primary-color);
 }
 
 @media (max-width: 800px) {
@@ -191,18 +256,18 @@ html, body {
 }
 
 .bsr-talk-card-arrow svg {
-    fill: $primary-color;
+    fill: var(--primary-color);
 }
 
 .bsr-talk-card-check {
     vertical-align: top;
-    background-color: $accent-color;
+    background-color: var(--accent-color);
     width: 20px;
     height: 20px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50% * $roundness;
+    border-radius: 50% * var(--roundness);
 }
 
 .bsr-talk-card-check svg {
@@ -218,7 +283,7 @@ html, body {
 }
 
 .bsr-footer-credit {
-    color: $secondary-color;
+    color: var(--secondary-color);
 }
 
 .bsr-talk {
@@ -229,19 +294,19 @@ html, body {
     padding: 15px;
     margin-top: 15px;
     background-color: white;
-    border-radius: 10px * $roundness;
+    border-radius: 10px * var(--roundness);
 }
 
 .bsr-talk-box-title {
     font-size: 1.3em;
-    color: $secondary-color;
+    color: var(--secondary-color);
     margin-bottom: .7em;
 }
 
 .bsr-talk-title {
     font-size: 1.7em;
     font-weight: 700;
-    color: $secondary-color;
+    color: var(--secondary-color);
 }
 
 .bsr-talk-info {
@@ -251,7 +316,7 @@ html, body {
 .bsr-talk-track {
     font-size: 1em;
     font-weight: 700;
-    color: $primary-color;
+    color: var(--primary-color);
     margin: 0 .6em 0 0;
     white-space: nowrap;
 }
@@ -265,7 +330,7 @@ html, body {
 .bsr-talk-description {
     line-height: 1.4em;
     margin: 10px 0 0 0;
-    color: $text-color;
+    color: var(--text-color);
 }
 
 .bsr-talk-description i {
@@ -298,7 +363,7 @@ html, body {
     background-position: center;
     margin-right: 20px;
     flex-shrink: 0;
-    border-radius: 50% * $roundness;
+    border-radius: 50% * var(--roundness);
 }
 
 .bsr-talk-speaker-info {
@@ -308,7 +373,7 @@ html, body {
 .bsr-talk-speaker-name {
     font-size: 1.4em;
     display: block;
-    color: $secondary-color;
+    color: var(--secondary-color);
     font-weight: 700;
 }
 
@@ -317,10 +382,10 @@ html, body {
     display: inline-block;
     color: #440092;
     line-height: 1.42;
+}
 
-    p {
-        margin-bottom: 10px;
-    }
+.bsr-talk-speaker-title p {
+    margin-bottom: 10px;
 }
 
 .bsr-talk-feedback-stars {
@@ -337,7 +402,7 @@ html, body {
 .bsr-talk-feedback-stars label svg {
     width: 40px;
     height: 40px;
-    fill: $primary-color;
+    fill: var(--primary-color);
     cursor: pointer;
 }
 
@@ -360,7 +425,7 @@ html, body {
 }
 
 .bsr-talk-feedback-comment:focus {
-    border-color: $primary-color;
+    border-color: var(--primary-color);
 }
 
 .bsr-talk-feedback-button {
@@ -371,7 +436,7 @@ html, body {
     margin: 10px auto;
     display: block;
     font-size: 1.3em;
-    background-color: $primary-color;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: .4em;
@@ -381,12 +446,12 @@ html, body {
 .bsr-talk-success {
     padding: 15px;
     margin-top: 15px;
-    background-color: $accent-color;
+    background-color: var(--accent-color);
     color: white;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border-radius: 50px * $roundness;
+    border-radius: 50px * var(--roundness);
 }
 
 .bsr-talk-success span {
@@ -405,34 +470,28 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+}
 
-    &:first-child {
-        border-top: none;
-    }
+.bsr-talk-question:first-child {
+    border-top: none;
+}
 
-    &-star {
-        svg {
-            width: 30px;
-            margin-right: 15px;
-            cursor: pointer;
-    
-            path {
-                fill: rgba(0,0,0,0.2);
-            }
-        }
+.bsr-talk-question-star svg {
+    width: 30px;
+    margin-right: 15px;
+    cursor: pointer;
+}
 
-        
-    }
+.bsr-talk-question-star svg path {
+    fill: rgba(0,0,0,0.2);
+}
 
-    &-text {
-        flex-grow: 1;
-    }
+.bsr-talk-question-text {
+    flex-grow: 1;
+}
 
-    &.is-selected {
-        .bsr-talk-question-star svg path {
-            fill: gold;
-        }
-    }
+.bsr-talk-question.is-selected .bsr-talk-question-star svg path {
+    fill: gold;
 }
 
 .bsr-talk-questions-top {
