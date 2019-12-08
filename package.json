@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sirikon/event-feedback.git"
+    "url": "git+https://github.com/frontfest/frontfest-app.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Sirikon/event-feedback/issues"
+    "url": "https://github.com/frontfest/frontfest-app/issues"
   },
-  "homepage": "https://github.com/Sirikon/event-feedback#README",
+  "homepage": "https://github.com/frontfest/frontfest-app#README",
   "dependencies": {
     "body-parser": "^1.19.0",
     "connect-redis": "^3.4.2",
