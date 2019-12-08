@@ -1,6 +1,8 @@
-# BilboStack App
+# FrontFest App
 
 (a.k.a. Event Toolbox)
+
+Based on the original code of the [BilboStack App](https://github.com/sirikon/bilbostack-app) (thank you! ❤️)
 
 This software is intended to provide tools to event organizers. Including:
 

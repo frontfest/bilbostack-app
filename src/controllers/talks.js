@@ -36,7 +36,7 @@ module.exports = () => {
             return res.redirect('/talk/' + req.talk.slug);
         }
     
-        var feedback = parseFeedback(req.body);
+        const feedback = parseFeedback(req.body);
         if (!validateFeedback(feedback)) {
             return res.sendStatus(400);
         }

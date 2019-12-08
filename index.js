@@ -11,7 +11,7 @@ if (cluster.isMaster && !debug) {
     const numWorkers = getNumWorkers();
     console.log(`Initializing with ${numWorkers} workers.\nWill listen on port ${PORT}.`);
 
-    for(var i = 0; i < numWorkers; i++) {
+    for(let i = 0; i < numWorkers; i++) {
         cluster.fork();
     }
 

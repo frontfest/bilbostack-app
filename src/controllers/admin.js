@@ -5,11 +5,11 @@ const questions = require('../data/questions');
 async function getIndex(req, res) {
     const feedbackList = await feedbacks.all();
     
-    var talkList = talks.all();
+    const talkList = talks.all();
 
-    var talkIndex = {};
+    const talkIndex = {};
 
-    var feedbackCount = 0;
+    let feedbackCount = 0;
 
     talkList.forEach((talk) => {
         talk._5starsCount = 0;
@@ -25,13 +25,13 @@ async function getIndex(req, res) {
     });
 
     feedbackList.forEach((feedback) => {
-        var talk = talkIndex[feedback.talkSlug];
+        const talk = talkIndex[feedback.talkSlug];
 
         if (!talk) return;
 
         feedbackCount++;
 
-        var stars = {
+        const stars = {
             5: '⭐⭐⭐⭐⭐',
             4: '⭐⭐⭐⭐',
             3: '⭐⭐⭐',
@@ -50,15 +50,15 @@ async function getIndex(req, res) {
     });
 
     talkList.forEach((talk) => {
-        var total = 0;
-        var count = 0;
+        let total = 0;
+        let count = 0;
 
-        for(var i = 1; i <= 5; i++) {
+        for(let i = 1; i <= 5; i++) {
             total += talk[`_${i}starsCount`] * i;
             count += talk[`_${i}starsCount`];
         }
 
-        for(i = 1; i <= 5; i++) {
+        for(let i = 1; i <= 5; i++) {
             talk[`_${i}starsPercent`] = (talk[`_${i}starsCount`] / count) * 100;
         }
 
