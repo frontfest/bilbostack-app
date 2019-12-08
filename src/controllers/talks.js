@@ -42,6 +42,7 @@ module.exports = () => {
         }
     
         await feedbacks.create(req.talk.slug, feedback, req.user);
+        // eslint-disable-next-line require-atomic-updates
         req.talk.feedbackReceived = true;
         res.redirect(`/talk/${req.talk.slug}`);
     }

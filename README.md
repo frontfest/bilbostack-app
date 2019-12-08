@@ -19,17 +19,25 @@ This software is intended to provide tools to event organizers. Including:
 
 There is a `docker-compose.yml` file inside `docker/eventtoolbox-devenv` that you can use to start a development environment (PostgreSQL, Redis and Adminer) using **Docker**.
 
-You can do this by running `npm run devenv:up`.
+You can do this by running `yarn devenv:up`.
 
 ## Development
 
 ### Quickstart
 
+Install yarn if not already installed
+
+```
+npm -g install yarn
+```
+
+Then
+
 ```bash
-npm install
-npm run devenv:up
-npm run migrate
-npm start
+yarn install
+yarn devenv:up
+yarn migrate
+yarn start
 ```
 
 And visit the application in [localhost:8000](http://localhost:8000).
@@ -38,7 +46,7 @@ And visit the application in [localhost:8000](http://localhost:8000).
 
 These are the special commands that you will need to work with this.
 
-Run them like `npm run <command>`.
+Run them like `yarn <command>`.
 
  - `test:docker`: Will run the tests inside Docker (see **Tests** section).
  - `devenv:up`: Starts the development environment.
@@ -49,9 +57,9 @@ Run them like `npm run <command>`.
 
 ### Tests
 
-The tests are inside the `test` folder. Run them with the command `npm test`.
+The tests are inside the `test` folder. Run them with the command `yarn test`.
 
-Tests can also run inside Docker. All the files involved in this process are inside `docker/testing` and you can run it by calling `npm run test:docker` or running `run.sh` inside `docker/testing`.
+Tests can also run inside Docker. All the files involved in this process are inside `docker/testing` and you can run it by calling `yarn test:docker` or running `run.sh` inside `docker/testing`.
 
 ## Running in production
 

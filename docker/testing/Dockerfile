@@ -1,11 +1,13 @@
-FROM node:10.14-alpine
+FROM node:12.13.1-alpine
 
 WORKDIR /app
 
 ADD package.json .
-ADD package-lock.json .
+ADD yarn.lock .
 
-RUN npm install
+RUN npm -g install yarn
+
+RUN yarn install
 
 ADD index.js .
 ADD .eslintrc.json .
