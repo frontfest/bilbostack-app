@@ -56,6 +56,8 @@ Run them like `yarn <command>`.
  - `migrate`: Run migrations, updating the database schema.
  - `lint`: Run lint check.
  - `lint:fix`: Run lint check **and** fix the things that can be fixed automatically.
+ - `prod:up`: Start app in production mode.
+ - `prod:down`: Stop app when running in production mode.
 
 ### Tests
 
@@ -65,7 +67,7 @@ Tests can also run inside Docker. All the files involved in this process are ins
 
 ## Running in production
 
-You'll find a script inside `scripts` folder called `deploy.sh`. This will:
+The npm script for starting the app in production mode will:
 
 - Build the Docker image locally.
 - Run the built Docker image with all the service dependencies.

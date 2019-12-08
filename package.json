@@ -13,7 +13,9 @@
     "start": "node index.js",
     "dev": "nodemon",
     "devenv:up": "cd docker/eventtoolbox-devenv && docker-compose up -d",
-    "devenv:down": "cd docker/eventtoolbox-devenv && docker-compose down"
+    "devenv:down": "cd docker/eventtoolbox-devenv && docker-compose down",
+    "prod:up": "docker-compose up -d --build && docker exec $(docker-compose ps -q app) yarn migrate",
+    "prod:down": "docker-compose down"
   },
   "repository": {
     "type": "git",
