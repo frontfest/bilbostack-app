@@ -5,8 +5,6 @@ ADD yarn.lock .
 ADD index.js .
 ADD src ./src
 RUN npm -g install yarn
-RUN yarn install && \
-    rm -rf ./node_modules && \
-    yarn install --production
+RUN yarn install --production
 ENV NODE_ENV=production
 CMD yarn start
