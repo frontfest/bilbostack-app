@@ -5,7 +5,7 @@
 <div class="bsr-talk-card" data-id="<%= talk.slug %>">
     <div class="bsr-talk-questions-top">
         <input type="checkbox" id="selected-only" onchange="toggleShowSelectedOnly(this.checked)">
-        <label for="selected-only">Show only selected questions.</label>
+        <label for="selected-only">Mostrar solo las preguntas seleccionadas.</label>
     </div>
     <% questions.forEach((question) => { %>
         <div class="bsr-talk-question" data-id="<%= question.id %>">
