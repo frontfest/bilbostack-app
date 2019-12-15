@@ -10,11 +10,15 @@
                         <% include ../partials/icons/check.html %>
                     </div>
                 <% } %>
-                <span><%= talk.name %></span>
+                <span><%= talk.title %></span>
             </h3>
             <div class="bsr-talk-card-info">
                 <div class="bsr-talk-card-info-speaker">
-                    <span><%= talk.speaker %></span>
+                    <span>
+                        <% talk.speakers.forEach((speaker, i) => { %>
+                            <%= speaker.name %><% if (i !== talk.speakers.length - 1) { %>, <% } %>
+                        <% }) %>
+                    </span>
                 </div>
                 <% if (talk.track) { %>
                     <div class="bsr-talk-card-info-track">

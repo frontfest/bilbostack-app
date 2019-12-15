@@ -8,7 +8,7 @@
     <% } %>
 
     <div class="bsr-talk-box">
-        <h2 class="bsr-talk-title"><%= talk.name %></h2>
+        <h2 class="bsr-talk-title"><%= talk.title %></h2>
         <h3 class="bsr-talk-info">
             <% if (talk.track) { %>
                 <span class="bsr-talk-track">TRACK <%= talk.track %></span>
@@ -21,22 +21,24 @@
                 <%= p %>
             </p>
         <% }) %>
-        
+
     </div>
 
-    <div class="bsr-talk-speaker">
-        <% if (talk.speakerImage) { %>
-            <div class="bsr-talk-speaker-image" style="background-image: url(/static/speaker-images/<%= talk.speakerImage %>)"></div>
-        <% } %>
-        <div class="bsr-talk-speaker-info">
-            <span class="bsr-talk-speaker-name"><%= talk.speaker %></span>
-            <div class="bsr-talk-speaker-title">
-                <% talk.speakerTitle.forEach((p) => { %>
-                    <p><%= p %></p>
-                <% }) %>
+    <% talk.speakers.forEach((speaker) => { %>
+        <div class="bsr-talk-speaker">
+            <% if (speaker.image) { %>
+                <div class="bsr-talk-speaker-image" style="background-image: url(/static/speaker-images/<%= speaker.image %>)"></div>
+            <% } %>
+            <div class="bsr-talk-speaker-info">
+                <span class="bsr-talk-speaker-name"><%= speaker.name %></span>
+                <div class="bsr-talk-speaker-title">
+                    <% speaker.headline.forEach((p) => { %>
+                        <p><%= p %></p>
+                    <% }) %>
+                </div>
             </div>
         </div>
-    </div>
+    <% }) %>
 
     <% if (questionReceived) { %>
         <div class="bsr-talk-success" id="question">
@@ -67,9 +69,9 @@
                     <label for="rating-4"><% include ../partials/icons/star.html %></label><input type="radio" id="rating-4" name="rating" value="4">
                     <label for="rating-5"><% include ../partials/icons/star.html %></label><input type="radio" id="rating-5" name="rating" value="5">
                 </div>
-        
+
                 <textarea class="bsr-talk-feedback-comment" name="comment" placeholder="Deja un comentario... si lo ves oportuno :)" maxlength="300"></textarea>
-        
+
                 <input class="bsr-talk-feedback-button" type="submit" value="Enviar">
             </form>
 

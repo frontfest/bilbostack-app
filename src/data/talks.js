@@ -1,109 +1,136 @@
 const talks = {
-
-    'kubernetes-is-not-a-deployment-tool-its-a-platform': {
-        name: 'Kubernetes is not a deployment tool: it\'s a platform',
+    'mi-componente-mis-normas': {
+        title: 'Mi componente, mis normas',
         description: [
-            'Kubernetes se ha convertido poco a poco el standard del mercado para desplegar aplicaciones tanto en cloud como en datacenters tradicionales. Esto es así gracias a su potente API y sus primitivas que nos permiten describir el ciclo de vida del software. ¿Pero es Kubernetes la pieza final del puzzle? ¿Debemos utilizar esas primitivas directamente para nuestros deploys',
-            'En esta charla veremos cómo podemos extender la funcionalidad base de Kubernetes para adecuarla a nuestras necesidades, y cómo esa extensibilidad está haciendo que grandes compañías estén creando nuevas herramientas usando Kubernetes como plataforma.'
+            'Estamos acostumbrados a trabajar con componentes, creando piezas reutilizables de forma cómoda. El problema viene cuando un dev decide llamar a su propiedad name y otro username. En esta charla veremos cómo evitar este tipo de situaciones definiendo convenciones y modelos comunes que estén disponibles tanto para componentes como incluso para la parte back.',
+            'Mostraremos algunas herramientas de Typescript y estructuración de repositorios de componentes que solemos utilizar para mantener el control de nuestros componentes.'
         ],
-        speaker: 'Jose Armesto',
-        speakerTitle: ['CloudBees'],
-        speakerImage: 'armesto.jpg',
-        track: '1',
-        when: '9:30-10:20'
+        speakers: [
+            {
+                name: 'Elizabeth Rodríguez',
+                headline: ['Frontend, master of keyboards'],
+                image: 'eli-rodriguez.jpg',
+            },
+            {
+                name: 'Jon Rojí',
+                headline: ['Frontend, master of unicorns'],
+                image: 'jon-roji.jpg',
+            }
+        ],
+        when: '09:45-10:30'
     },
 
-    'web-components-api-esto-va-en-serio': {
-        name: 'Web Components API: esto va en serio',
+    'arte-generativo-con-css': {
+        title: 'Arte generativo con CSS',
         description: [
-            'La API de Web Components empieza a estar disponible en los navegadores principales… ¿Qué funcionalidades nos aporta exactamente? ¿Podemos dejar de usar frameworks JavaScript como React, Vue o Angular? En esta charla veremos cómo usar la API de Web Components con JavaScript vanilla, qué consecuencias tiene esta API sobre nuestro CSS, y qué ventajas ofrece respecto a los componentes implementados en frameworks como React.'
+            '¿Sabías que a través del arte generativo podemos generar obras autónomas a partir de un algoritmo? En esta charla vamos a aprender cómo utilizar CSS para crear arte, de la mano de <css-doodle />, un Web Component para dibujar patrones que pensarías que son imposibles de hacer con CSS.'
         ],
-        speaker: 'Belén Albeza',
-        speakerTitle: ['Mozilla'],
-        speakerImage: 'albeza.png',
-        track: '2',
-        when: '9:30-10:20'
+        speakers: [
+            {
+                name: 'Sonia Ruiz',
+                headline: ['Frontend Developer'],
+                image: 'sonia-ruiz.jpg',
+            }
+        ],
+        when: '10:35-11:20'
     },
 
-    'come-reza-data': {
-        name: 'Come reza data',
+    'programación-funcional-para-el-día-a-día-mito-o-realidad': {
+        title: 'Programación funcional para el día a día, ¿mito o realidad?',
         description: [
-            'Hablaremos sobre como y cuando desplegar arquitecturas Big Data, así como los errores mas comunes cuando implantamos este tipo de soluciones en empresa, desde la cultura de trabajo a las herramientas a utilizar en función de los casos de explotación. Un viaje por las meteduras de pata mas comunes para encontrar las mejoras practicas de despliegue de este tipo de infraestructuras.'
+            'La programación funcional está de moda, eso es así. Este paradigma de programación constituye los cimientos de tecnologías tan punteras como React y sus hooks, Redux o los observables RxJS.',
+            'La mayoría de los desarrolladores ya tenemos asimilados sus conceptos más básicos como reduce, map, filter… algunos incluso hacen katas con currificación o inmutabilidad. Sin embargo, integrarlo en nuestro día a día no siempre es sencillo, estamos acostumbrados a una programación imperativa con la que nos es difícil romper.',
+            'En esta charla abordaremos problemas a los que nos enfrentamos a diario los programadores e intentaremos darle un enfoque funcional, descubriendo, la forma de integrar este paradigma en nuestro trabajo habitual y las ventajas que nos reporta. Plantearemos ejemplos prácticos que nos permitan salir de nuestra zona de comfort programático y empezar a explorar el universo funcional más allá de la vía láctea imperativa.'
         ],
-        speaker: 'Inés Huertas',
-        speakerTitle: ['DataTONS'],
-        speakerImage: 'huertas.jpg',
-        track: '1',
-        when: '10:30-11:20'
+        speakers: [
+            {
+                name: 'Henar Hernández',
+                headline: ['Programadora (funcional siempre que puedo), madrugadora, curranta, enamorada de las comunidades y vividora nonstop'],
+                image: 'henar-hernandez.jpg',
+            }
+        ],
+        when: '12:00-12:45'
     },
 
-    'agile-javascript': {
-        name: 'Agile JavaScript',
+    'tipografia-para-frontends': {
+        title: 'Tipografía para frontends',
         description: [
-            'En el mundo del desarrollo JavaScript, encontrar un flow estable y medianamente fácil de asimilar por nuestro equipo puede suponer todo un reto.',
-            'Un posible factor de éxito puede radicar en nuestra capacidad para alinear este entorno con nuestros valores de crafter pata negra: Testing, pair programming, continuous delivery, design patterns...',
-            'En "Agile JavaScript" intentaremos hacer explícitos estos valores con el fin de que sean ellos los que nos ayuden a elegir el conjunto de prácticas y tecnologías que nos conviene adoptar. Una manera distinta de viajar por el estado actual y futuro del ecosistema JavaScript y no caer en la "JavaScript fatigue".'
+            'Como encargados de que las interfaces que desarrollamos tengan la mejor experiencia de usuario, los frontends tenemos que conocer a fondo todas las herramientas de las que disponemos. La tipografía es una de esas herramientas y a veces las utilizamos muy por debajo de sus posibilidades. Esta charla es un recorrido desde las bases de la tipografía aplicada a la web, hasta el uso de las ya imparables variables fonts. Veremos cómo usar tipografía responsive, y componer textos equilibrados, así como otras técnicas de fácil aplicación pero que nos ayudarán a elevar el nivel de acabados de las interfaces que creamos.'
         ],
-        speaker: 'Ricardo Borillo',
-        speakerTitle: ['Universitat Jaume I'],
-        speakerImage: 'borillo.jpg',
-        track: '2',
-        when: '10:30-11:20'
+        speakers: [
+            {
+                name: 'Elena Ramírez',
+                headline: ['Diseñadora interactiva y frontend especializada en tipografía en Ashler Design'],
+                image: 'elena-ramirez.jpg',
+            }
+        ],
+        when: '12:50-13:35'
     },
 
-    'devops-is-not-what-you-think': {
-        name: 'Devops is not what you think',
+    'welcome-to-the-dark-side': {
+        title: 'Welcome... to the dark side?',
         description: [
-            'Seguramente alguien os haya contado que Devops es un rol, o un equipo, o incluso peor… el nombre moderno para los administradores de sistemas.',
-            'Lo que seguramente no os hayan contado es que Devops es un movimiento, una cultura y una serie de practicas que incluyendo las ideas de Agile, las amplian y modernizan adaptandolas a los tiempos actuales (SaaS, Cloud, etc).',
-            'Devops es la piedra ángular de todos las empresas tecnologicas de alto rendimiento y lo que les permite tener una buena frequencia de despliegue manteniendo la disponibilidad del sistema.',
-            'En esta charla describiremos la cultura (colaboración, confianza, aprendizaje continuo, etc.), las prácticas (incluir requisitos operacionales en el producto, automatización, Continuous Delivery, Infrastructure as Code, You Build It, You Run It, etc...), y daremos ideas de como introducirla (The Three Ways, Hiring, Incident Reports, Optimizar el Mean Ttime To Recovery, etc). Hablaremos de la importancia de la arquitectura, del desarrollo de software ágil y de distintas organizaciones de equipos que favorecen este tipo de cultura.'
+            'El modo oscuro ha sido un tema muy popular en el mundo de diseño de interfaz recientemente. De repente, parece que todo necesita dos modos: claro y oscuro. ¿Es eso verdad? En 40 minutos, vamos a analizar dónde y cuándo hay que diseñar una interfaz en modo oscuro, también revisaremos los errores típicos en el proceso de creación del mismo.'
         ],
-        speaker: 'Eduardo Ferro',
-        speakerTitle: ['Nextail'],
-        speakerImage: 'ferro.jpg',
-        track: '1',
-        when: '12:00-12:50'
+        speakers: [
+            {
+                name: 'James Heda Weng',
+                headline: ['Doctorado en Bellas Artes. Product Manager & UX Designer @ StyleSage'],
+                image: 'james-heda-weng.jpg',
+            }
+        ],
+        when: '15:00-15:45'
     },
 
-    'ux-para-desarrolladores-front-y-back': {
-        name: 'UX para desarrolladores front y back',
+    'make-ui-components-for-web-framework-ecosystem': {
+        title: 'Make UI Components for Web Framework Ecosystem',
         description: [
-            'La experiencia de usuario de un producto o servicio digital es responsabilidad de todo el equipo de desarrollo y no solamente de los "uxers".',
-            'Muchos proyectos arrancan por la tecnología que se va usar y por ello haremos hincapié en la necesidad actual de poner el foco en el usuario y no en la tecnología si queremos construir productos útiles, deseables y usables.',
-            'Veremos en qué consiste el proceso de Diseño Centrado en el usuario y cómo integrarlo en los procesos de desarrollo más tradicionales.',
+            '¿Es posible usar un componente UI creado con React en Angular? ¿Y uno en Vue.js en Ember? A pesar de la gran diversidad de frameworks dentro del mundo Frontend, en esta charla veremos como crear componentes e interfaz de usuario utilizando las APIs de la plataforma web de manera que podrá ser utilizados de forma agnóstica en cualquiera de los principales frameworks que lideran el ecosistema web.'
         ],
-        speaker: 'Virginia Aguirre',
-        speakerTitle: ['Uxer School'],
-        speakerImage: 'aguirre.jpg',
-        track: '2',
-        when: '12:00-12:50'
+        speakers: [
+            {
+                name: 'Sergio Contreras',
+                headline: ['Web Frontend advocate and amateur triathlete / GDE Web Technologies'],
+                image: 'sergio-contreras.jpg',
+            }
+        ],
+        when: '15:50-16:35'
     },
 
-    'diez-retos-de-la-creacion-de-chatbots-y-asistentes-con-nlp': {
-        name: '10 retos de la creación de chatbots y asistentes con NLP',
+    'primitive-obsession': {
+        title: 'Primitive Obsession',
         description: [
-            'Los asistentes virtuales y chatbots son tendencia y tienen un gran potencial, pero el uso de lenguaje natural trae asociados retos que los diseñadores y desarrolladores de estas nuevas interfaces tenemos que sortear. En la charla \'Retos de la creación de chatbots y asistentes con NLP\' desmitificaremos el NLP, repasaremos los 10 principales retos de estos proyectos, veremos ejemplos reales de éxitos y hablaremos de herramientas y buenas prácticas que ayudan a crear mejores experiencias conversacionales.'
+            'Esta industria me ha enseñado que estar en continuo aprendizaje es necesario. En el camino hacia mi objetivo de convertirme en una buena programadora, he pasado por varias fases cíclicas que alternaban la sensación de no saber lo que haces y el subidón de estar aprendiendo algo complejo.',
+            'Me encanta resolver problemas y cuando logro entender algo que me parecía complejo, me gusta escribirlo y explicarlo con mis palabras de newbie por si a alguien le puede ayudar. Y eso es lo que voy a tratar de hacer en esta charla.',
+            '¿Puede el testeo ayudarte a refactorizar? ¿Qué ocurre cuando traemos datos al front? Eso de las buenas prácticas y el clean code mola, pero lo “divertido” es darse cuenta, en una prueba técnica para un empleo, que tu código tiene “olorcillo” y que te falta mucho por aprender. Os contaré lo que aprendí allí.',
+            'En definitiva, te vamos a contar una historia con casos prácticos que ojalá te sean de utilidad.'
         ],
-        speaker: 'Cristina Santamarina',
-        speakerTitle: ['The Neon Project'],
-        speakerImage: 'santamarina.jpg',
-        track: '1',
-        when: '13:00-13:50'
+        speakers: [
+            {
+                name: 'Aida Albarrán',
+                headline: ['Frontend, madre y cantante y, de la lógica, amante'],
+                image: 'aida-albarran.jpg',
+            }
+        ],
+        when: '17:15-18:00'
     },
 
-    'viaje-desde-arquitectura-hexagonal-al-event-sourcing': {
-        name: 'Viaje desde Arquitectura Hexagonal al Event Sourcing',
+    'the-art-of-front-end-architecture': {
+        title: 'The Art of Front-end Architecture',
         description: [
-            `Arquitecturas basadas en eventos tales como Event Sourcing tienen múltiples beneficios: escalabilidad, gestión de la complejidad, auditoría, etc. Pero llegar a ellas es duro. Nos faltan conocimientos, experiencia y coraje.',
-            'En esta charla, mostraré algunos trucos y consejos para evolucionar vuestra arquitectura actual hacia Event Sourcing paso a paso. Empezaremos desde una aplicación con arquitectura hexagonal y acabaremos a las puertas de Event Sourcing.`,
+            '... o cómo darse cuenta de que el desarrollo front-end es desarrollo de software.',
+            'En mi día a día hago lo que puedo creando aplicaciones web "complejas". Aquí voy a compartir lo que he aprendido intentado que sean mantenibles, escalables, y agnósticas del framework.',
+            'Veremos cómo crear software durable en el front end y cómo los principios de diseño nos ayudarán a tomar decisiones más inteligentes.',
         ],
-        speaker: 'Carlos Buenosvinos',
-        speakerTitle: ['Xing'],
-        speakerImage: 'buenosvinos.jpg',
-        track: '2',
-        when: '13:00-13:50'
-    }
+        speakers: [
+            {
+                name: 'Adrià Fontcuberta',
+                headline: ['Ingeniero de software interesado en JavaScript, CSS, clean code, lean software development y todo lo que se le parezca'],
+                image: 'adria-fontcuberta.jpg',
+            }
+        ],
+        when: '18:05-18:50'
+    },
 };
 
 Object.keys(talks).forEach((k) => {
