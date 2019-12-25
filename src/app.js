@@ -14,6 +14,7 @@ const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin';
 
 const config = {
     title: 'FrontFest',
+    hashtag: '#FrontFest20',
     year: '2020',
     twitter: '@frontfest',
     baseUrl: process.env.BASE_URL || 'http://localhost:8000'

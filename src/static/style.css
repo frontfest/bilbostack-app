@@ -7,8 +7,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -19,7 +19,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -45,16 +45,17 @@ table {
 /* VARIABLES */
 
 :root {
-    --primary-color: #d09c2e;
-    --secondary-color: #542836;
+    --primary-color: #9B4B4C;
+    --secondary-color: #9B4B4C;
     --accent-color: var(--primary-color);
+    --stars-color: #d09c2e;
     --text-color: #333;
     --background-color: #eeeced;
     --highlight-color: #d09d2e49;
-    
+
     --global-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --monospace-font: monospace;
-    
+
     --roundness: 0;
 }
 
@@ -163,7 +164,6 @@ html, body {
 .bsr-talk-card-info-speaker {
     font-size: 1em;
     flex-grow: 1;
-    color: var(--primary-color);
     font-style: italic;
     font-weight: 700;
 }
@@ -391,7 +391,6 @@ html, body {
 .bsr-talk-speaker-title {
     margin: .5em 0 0 0;
     display: inline-block;
-    color: #440092;
     line-height: 1.42;
 }
 
@@ -413,7 +412,7 @@ html, body {
 .bsr-talk-feedback-stars label svg {
     width: 40px;
     height: 40px;
-    fill: var(--primary-color);
+    fill: var(--stars-color);
     cursor: pointer;
 }
 
