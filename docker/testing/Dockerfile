@@ -5,8 +5,6 @@ WORKDIR /app
 ADD package.json .
 ADD yarn.lock .
 
-RUN npm -g install yarn
-
 RUN yarn install
 
 ADD index.js .

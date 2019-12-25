@@ -8,8 +8,6 @@ services:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - POSTGRES_DB=eventtoolbox
       - PGDATA=/var/lib/postgresql/data/pgdata
-    volumes:
-      - ./data:/var/lib/postgresql/data
 
   adminer:
     image: adminer
