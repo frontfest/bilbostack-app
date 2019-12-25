@@ -54,7 +54,6 @@ table {
     --highlight-color: #d09d2e49;
 
     --global-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --monospace-font: monospace;
 
     --roundness: 0;
 }
@@ -83,6 +82,10 @@ html, body {
     background-color: var(--background-color);
 }
 
+input, textarea {
+    font-family: var(--global-font);
+}
+
 .bsr-body {
     flex-grow: 1;
     width: 100%;
@@ -98,7 +101,7 @@ html, body {
 .bsr-header {
     background-color: var(--secondary-color);
     color: white;
-    text-align: center;
+    text-align: left;
     user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -108,7 +111,13 @@ html, body {
 .bsr-header-link {
     color: inherit;
     text-decoration: none;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+
+.bsr-header-link img {
+    margin-right: 20px;
+    height: 60px;
 }
 
 .bsr-header-content {
@@ -116,10 +125,10 @@ html, body {
 }
 
 .bsr-header-title {
+    display: flex;
+    align-items: center;
     font-size: 2.5em;
-    margin: 0 8px;
     font-weight: 900;
-    font-family: var(--monospace-font);
 }
 
 .bsr-header-title-darker {
@@ -164,7 +173,6 @@ html, body {
 .bsr-talk-card-info-speaker {
     font-size: 1em;
     flex-grow: 1;
-    font-style: italic;
     font-weight: 700;
 }
 
@@ -429,7 +437,7 @@ html, body {
     border-color: rgba(0,0,0,0.1);
     border-style: solid;
     border-width: 1px;
-    font-size: 1.2em;
+    font-size: 1rem;
     padding: 15px;
 }
 
@@ -504,4 +512,10 @@ html, body {
 
 .bsr-talk-questions-top {
     padding: 0 0 15px 0;
+}
+
+.bsr-talk-disclaimer {
+    margin: 25px;
+    font-size: 0.8rem;
+    color: #444;
 }
