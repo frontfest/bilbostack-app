@@ -44,7 +44,7 @@
         styleElement: document.querySelector('#questions-list-runtime-style'),
         selectedOnlyCheckbox: document.querySelector('#selected-only')
     };
-    const state = {
+    let state = {
         selectedQuestions: {}
     };
 
@@ -86,13 +86,12 @@
 
     function render() {
         const questions = document.querySelectorAll('.bsr-talk-question[data-id]');
-        for(let i = 0; i < questions.length; i++) {
-            const element = questions[i];
+        questions.forEach(element => {
             const id = parseInt(element.getAttribute('data-id'));
             if (state.selectedQuestions[id]) {
                 element.classList.add('is-selected');
             }
-        }
+        });
 
         toggleShowSelectedOnly(elements.selectedOnlyCheckbox.checked);
     }
