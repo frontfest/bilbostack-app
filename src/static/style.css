@@ -49,7 +49,7 @@ table {
     --secondary-color: #9B4B4C;
     --accent-color: var(--primary-color);
     --stars-color: #d09c2e;
-    --text-color: #333;
+    --text-color: #222;
     --background-color: #eeeced;
     --highlight-color: #d09d2e49;
 
@@ -94,7 +94,7 @@ input, textarea {
 .bsr-content {
     max-width: 800px;
     display: block;
-    margin: auto;
+    margin: 5px auto 15px auto;
     box-sizing: border-box;
 }
 
@@ -230,7 +230,7 @@ input, textarea {
 .bsr-talk-card-result-option-bar {
     display: inline-block;
     width: 200px;
-    height: 4px;
+    height: 5px;
     background-color: whitesmoke;
     vertical-align: middle;
     position: relative;
@@ -296,22 +296,32 @@ input, textarea {
     fill: white;
 }
 
+.bsr-footer {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
 .bsr-footer-content {
-    padding: 25px;
+    padding: 20px;
     text-align: center;
 }
 
+.bsr-footer-content img {
+    width: 135px;
+    margin-bottom: 15px;
+}
+
 .bsr-footer-credit {
-    color: var(--secondary-color);
+    color: var(--stars-color);
 }
 
 .bsr-talk {
-    margin: 10px 10px 0 10px;
+    margin: 10px;
 }
 
 .bsr-talk-box {
     padding: 15px;
-    margin-top: 15px;
+    margin-top: 10px;
     background-color: white;
     border-radius: 10px * var(--roundness);
 }
@@ -404,6 +414,7 @@ input, textarea {
 
 .bsr-talk-speaker-title p {
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .bsr-talk-feedback-stars {
