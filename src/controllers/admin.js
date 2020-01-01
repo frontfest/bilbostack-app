@@ -4,7 +4,7 @@ const questions = require('../data/questions');
 
 async function getIndex(req, res) {
     const feedbackList = await feedbacks.all();
-    
+
     const talkList = talks.all();
 
     const talkIndex = {};
@@ -50,17 +50,12 @@ async function getIndex(req, res) {
     });
 
     talkList.forEach((talk) => {
-        let total = 0;
-        let count = 0;
+        const total = [1,2,3,4,5].reduce((acc, i) => acc + talk[`_${i}starsCount`] * i, 0);
+        const count = [1,2,3,4,5].reduce((acc, i) => acc + talk[`_${i}starsCount`], 0);
 
-        for(let i = 1; i <= 5; i++) {
-            total += talk[`_${i}starsCount`] * i;
-            count += talk[`_${i}starsCount`];
-        }
-
-        for(let i = 1; i <= 5; i++) {
+        [1,2,3,4,5].forEach((i) => {
             talk[`_${i}starsPercent`] = (talk[`_${i}starsCount`] / count) * 100;
-        }
+        });
 
         talk._feedbackCount = count;
 
