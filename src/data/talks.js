@@ -1,20 +1,14 @@
 const talks = {
-    'mi-componente-mis-normas': {
-        title: 'Mi componente, mis normas',
+    'make-ui-components-for-web-framework-ecosystem': {
+        title: 'Make UI Components for Web Framework Ecosystem',
         description: [
-            'Estamos acostumbrados a trabajar con componentes, creando piezas reutilizables de forma cómoda. El problema viene cuando un dev decide llamar a su propiedad name y otro username. En esta charla veremos cómo evitar este tipo de situaciones definiendo convenciones y modelos comunes que estén disponibles tanto para componentes como incluso para la parte back.',
-            'Mostraremos algunas herramientas de Typescript y estructuración de repositorios de componentes que solemos utilizar para mantener el control de nuestros componentes.'
+            '¿Es posible usar un componente UI creado con React en Angular? ¿Y uno en Vue.js en Ember? A pesar de la gran diversidad de frameworks dentro del mundo Frontend, en esta charla veremos como crear componentes e interfaz de usuario utilizando las APIs de la plataforma web de manera que podrá ser utilizados de forma agnóstica en cualquiera de los principales frameworks que lideran el ecosistema web.'
         ],
         speakers: [
             {
-                name: 'Elizabeth Rodríguez',
-                headline: ['Frontend, master of keyboards'],
-                image: 'eli-rodriguez.jpg',
-            },
-            {
-                name: 'Jon Rojí',
-                headline: ['Frontend, master of unicorns'],
-                image: 'jon-roji.jpg',
+                name: 'Sergio Contreras',
+                headline: ['Web Frontend advocate and amateur triathlete / GDE Web Technologies'],
+                image: 'sergio-contreras.jpg',
             }
         ],
         when: '09:45-10:30'
@@ -82,16 +76,22 @@ const talks = {
         when: '15:00-15:45'
     },
 
-    'make-ui-components-for-web-framework-ecosystem': {
-        title: 'Make UI Components for Web Framework Ecosystem',
+    'mi-componente-mis-normas': {
+        title: 'Mi componente, mis normas',
         description: [
-            '¿Es posible usar un componente UI creado con React en Angular? ¿Y uno en Vue.js en Ember? A pesar de la gran diversidad de frameworks dentro del mundo Frontend, en esta charla veremos como crear componentes e interfaz de usuario utilizando las APIs de la plataforma web de manera que podrá ser utilizados de forma agnóstica en cualquiera de los principales frameworks que lideran el ecosistema web.'
+            'Estamos acostumbrados a trabajar con componentes, creando piezas reutilizables de forma cómoda. El problema viene cuando un dev decide llamar a su propiedad name y otro username. En esta charla veremos cómo evitar este tipo de situaciones definiendo convenciones y modelos comunes que estén disponibles tanto para componentes como incluso para la parte back.',
+            'Mostraremos algunas herramientas de Typescript y estructuración de repositorios de componentes que solemos utilizar para mantener el control de nuestros componentes.'
         ],
         speakers: [
             {
-                name: 'Sergio Contreras',
-                headline: ['Web Frontend advocate and amateur triathlete / GDE Web Technologies'],
-                image: 'sergio-contreras.jpg',
+                name: 'Elizabeth Rodríguez',
+                headline: ['Frontend, master of keyboards'],
+                image: 'eli-rodriguez.jpg',
+            },
+            {
+                name: 'Jon Rojí',
+                headline: ['Frontend, master of unicorns'],
+                image: 'jon-roji.jpg',
             }
         ],
         when: '15:50-16:35'
