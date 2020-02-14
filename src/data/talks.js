@@ -131,6 +131,22 @@ const talks = {
         ],
         when: '18:05-18:50'
     },
+
+    'frontfest-en-general': {
+        title: 'FrontFest en general',
+        description: [
+            'Cuéntanos que te ha parecido el evento, en cualquiera de sus aspectos, y en qué podríamos mejorar.',
+        ],
+        speakers: [
+            {
+                name: 'Organización de FrontFest',
+                headline: [],
+                image: 'logo.svg',
+            }
+        ],
+        when: '',
+        hideQuestion: true
+    },
 };
 
 Object.keys(talks).forEach((k) => {

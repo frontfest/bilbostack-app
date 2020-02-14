@@ -47,6 +47,7 @@
         </div>
     <% } %>
 
+    <% if (!talk.hideQuestion) { %>
     <div class="bsr-talk-box">
         <h2 class="bsr-talk-box-title">Haz una pregunta</h2>
 
@@ -56,6 +57,7 @@
             <input class="bsr-talk-feedback-button" type="submit" value="Enviar">
         </form>
     </div>
+    <% } %>
 
     <% if (!feedbackReceived) { %>
         <div class="bsr-talk-box">
